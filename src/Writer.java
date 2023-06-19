@@ -7,8 +7,12 @@ public class Writer {
     PrintWriter outputFile;
 
     public Writer(String fileName) throws IOException{
-        //TODO Student
+        FileOutputStream fileStream = new FileOutputStream(fileName);
+        outputFile = new PrintWriter(fileStream);
+        outputFile.println("This line is in fileName");
+        outputFile.print("So is this one!");
     }
+    //TODO Student takes single parameter and creates file output stream
 
     public void closeWriter() {
         outputFile.print("End of file.");
@@ -24,7 +28,7 @@ public class Writer {
         //TODO Student
     }
     /** Student Self-Explanation
-     * 
+     * take output and reverse?
      */
     public void logMax(ArrayList<String> fileContents) {
         //TODO Student
